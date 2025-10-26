@@ -1,0 +1,129 @@
+#include<stdio.h>
+float
+    input, output, udhfix, akhirfix,
+    USD = 1.0,
+    EUR = 0.860,         // Euro
+    CHF = 0.795,         // Swiss Franc
+    CAD = 1.400,         // Canadian Dollar
+    CNY = 7.121,         // Chinese Yuan
+    GBP = 0.751,         // British Pound Sterling
+    BRL = 5.388,         // Brazilian Real
+    JPY = 152.810,       // Japanese Yen
+    INR = 87.860,        // Indian Rupee
+    KRW = 1439.0;        // South Korean Won
+int akhir, awal;
+
+int main()
+{
+    printf(
+        " 1. US Dollar           (USD)\n 2. Euro                (EUR)\n 3. Swiss Franc         (CHF)\n 4. Canadian Dollar     (CAD)\n 5. Chinese Yuan        (CNY)\n 6. Pound Sterling      (GBP)\n 7. Brazilian Real      (BRL)\n 8. Japanese Yen        (JPY)\n 9. Indian Rupee        (INR)\n 10. South Korean Won    (KRW)\n ");
+    printf("Konversi dari? (Masukkan angka): ");
+    scanf("%d",&awal);
+
+
+    printf(
+        " 1. US Dollar           (USD)\n 2. Euro                (EUR)\n 3. Swiss Franc         (CHF)\n 4. Canadian Dollar     (CAD)\n 5. Chinese Yuan        (CNY)\n 6. Pound Sterling      (GBP)\n 7. Brazilian Real      (BRL)\n 8. Japanese Yen        (JPY)\n 9. Indian Rupee        (INR)\n 10. South Korean Won    (KRW)\n ");
+    printf("Menuju? (Masukkan angka): ");
+    scanf("%d",&akhir);
+
+    printf("Jumlah uang yang ingin di konversi: ");
+    scanf("%f",&input);
+
+    switch (awal) {
+    case 1:
+        udhfix = USD;
+        break;
+    case 2:
+        udhfix = EUR;
+        break;
+
+    case 3:
+        udhfix = CHF;
+        break;
+
+    case 4:
+        udhfix = CAD;
+        break;
+
+    case 5:
+        udhfix = CNY;
+        break;
+
+    case 6:
+        udhfix = GBP;
+        break;
+
+    case 7:
+        udhfix = BRL;
+        break;
+
+    case 8:
+        udhfix = JPY;
+        break;
+
+    case 9:
+        udhfix = INR;
+        break;
+
+    case 10:
+        udhfix = KRW;
+        break;
+    }
+
+    switch (akhir) {
+    case 1:
+        akhirfix = USD;
+        break;
+    case 2:
+        akhirfix = EUR;
+        break;
+
+    case 3:
+        akhirfix = CHF;
+        break;
+
+    case 4:
+        akhirfix = CAD;
+        break;
+
+    case 5:
+        akhirfix = CNY;
+        break;
+
+    case 6:
+        akhirfix = GBP;
+        break;
+
+    case 7:
+        akhirfix = BRL;
+        break;
+
+    case 8:
+        akhirfix = JPY;
+        break;
+
+    case 9:
+        akhirfix = INR;
+        break;
+
+    case 10:
+        akhirfix = KRW;
+        break;
+    }
+
+    if (udhfix == USD)
+    {
+        output = input*akhirfix;
+    }
+    else if (udhfix != USD && akhirfix == USD)
+    {
+        output =  input/udhfix;
+    }
+    else if (udhfix != USD && akhirfix != USD)
+    {
+        output =  (input/udhfix)*akhirfix;
+    }
+    printf("Uang hasil konversi %.2f", output);
+    return 0;
+}
+
